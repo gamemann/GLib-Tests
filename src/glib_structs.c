@@ -16,12 +16,12 @@ int main(int argc, char **argv)
     // Create the GHash table using integer hash.
     GHashTable *tbl = g_hash_table_new_full(g_int_hash, g_int_equal, NULL, g_free);
 
-    // We'll want to check the results.
+    // We'll want to check the table's pointer.
     if (tbl == NULL)
     {
         printf("GHash table failed to initialize.");
 
-        return 1;
+        return EXIT_FAILURE;
     }
 
     // Iterator.
